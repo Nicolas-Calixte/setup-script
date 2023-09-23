@@ -10,10 +10,10 @@ mkdir -pv $HOME/.config/zsh/plugins $HOME/.vim/plugged $HOME/.cache $HOME/.scrip
 	echo -e '------------- \e[1;32m PHASE 2 DONE. \e[0m -----------'
 
 #----------- curl config zsh > $HOME/.config/zsh/.zshrc
-curl https://raw.githubusercontent.com/Nicolas-Calixte/zsh-config/master/zshconfig.txt > $HOME/.config/zsh/.zshrc &&
+curl https://raw.githubusercontent.com/Nicolas-Calixte/setup-script/master/zshrc > $HOME/.config/zsh/.zshrc &&
        	echo -e '------------- \e[1;32m ZSH CONFIG INSTALLED. \e[0m ----------' 
 # ---------- curl config vim > $HOME/.vim/.vimrc
-curl https://raw.githubusercontent.com/Nicolas-Calixte/vimconfig/master/vimconf.txt > $HOME/.vim/.vimrc && 
+curl https://raw.githubusercontent.com/Nicolas-Calixte/setup-script/master/vimrc > $HOME/.vim/.vimrc && 
 	echo -e '------------- \e[1;32m VIM CONFIG INSTALLED. \e[0m ----------' 
 
 # cloning and sourcing zsh plugins
@@ -24,7 +24,7 @@ mkdir $HOME/.config/zsh/plugins/zsh-autosuggestions &&
 	git clone https://github.com/zsh-users/zsh-autosuggestions.git  $HOME/.config/zsh/plugins/zsh-autosuggestions && 
 	echo -e '------------ \e[1;32m PHASE 3 DONE. \e[0m -----------'
 
-# ----- Installing vim-plug for vim
+# ----- Installing vim-plug
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
 		echo -e '------------- \e[1;32m vim-plug installed.\e[0m ----------' &&
 		vim -c ':PlugInstall | quit' &&
