@@ -4,12 +4,12 @@
 
 dir="$(pwd)"
 
-apt-get install curl wget tree snap shellcheck python3 python3-dev git vim python3-pip python3-setuptools -y && 
+apt-get install curl wget tree snap shellcheck python3 python3-dev git vim python3-pip python3-setuptools ifplugd net-tools -y && 
 	echo -e '------------- \e[1;32m PHASE 1 DONE. \e[0m -----------'
 
 mkdir -pv $dir/.config/zsh/plugins $dir/.vim/plugged $dir/.cache $dir/.scripts &&
 	mv $dir/.zsh*  $dir/.config/zsh/ ; mv $dir/.vim* $dir/.vim/ &&
-	ln -s $dir/.config/zsh/.zshrc $dir/ ; ln -s $dir/.vim/.vimrc $dir/ &&
+	ln -s $dir/.config/zsh/.zshrc $dir ; ln -s $dir/.vim/.vimrc $dir &&
 	echo -e '------------- \e[1;32m PHASE 2 DONE. \e[0m -----------'
 
 #----------- curl config zsh > $dir/.config/zsh/.zshrc
