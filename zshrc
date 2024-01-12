@@ -26,6 +26,8 @@ _comp_options+=(globdots)
 bindkey -v
 bindkey '^R' history-incremental-search-backward 
 export KEYTIMEOUT=1
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # change fg color of suggestions and set ls colors
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=magenta"
